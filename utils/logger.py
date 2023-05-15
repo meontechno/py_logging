@@ -11,8 +11,8 @@ PAPERTRAIL_HOST = config.get("PAPERTRAIL_HOST")
 PAPERTRAIL_PORT = int(config.get("PAPERTRAIL_PORT"))
 
 
-def setup_logger() -> None:
-    logger = logging.getLogger("Custom Logger")
+def setup_logger() -> logging.Logger:
+    logger = logging.getLogger("DEVICE_ID")
     logger.setLevel(logging.DEBUG)
     # handler = logging.StreamHandler()
     handler = SysLogHandler(address=(PAPERTRAIL_HOST, PAPERTRAIL_PORT))
@@ -20,5 +20,3 @@ def setup_logger() -> None:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     return logger
-
-
