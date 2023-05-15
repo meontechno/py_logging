@@ -8,7 +8,7 @@ load_dotenv()
 config = os.environ
 
 PAPERTRAIL_HOST = config.get("PAPERTRAIL_HOST")
-PAPERTRAIL_PORT = config.get("PAPERTRAIL_PORT")
+PAPERTRAIL_PORT = int(config.get("PAPERTRAIL_PORT"))
 
 
 def setup_logger() -> None:
