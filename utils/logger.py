@@ -1,10 +1,6 @@
 import logging
 from logging.handlers import SysLogHandler
 
-PAPERTRAIL_HOST = "logs2.papertrailapp.com"
-PAPERTRAIL_PORT = 12686
-
-
 def setup_logger() -> None:
     logger = logging.getLogger("Custom Logger")
     logger.setLevel(logging.DEBUG)
