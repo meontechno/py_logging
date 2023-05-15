@@ -8,9 +8,9 @@ def main() -> None:
         datefmt="%Y-%m-%d %H:%M:%S",
     )
 
-    logging.info("Two worlds are colliding")
-    logging.warning("Two worlds are colliding")
-    logging.error("Two worlds are colliding")
+    logging.info("Enjoy this? Rating helps us know if we should recommend more like this.")
+    logging.warning("Enjoy this? Rating helps us know if we should recommend more like this.")
+    logging.error("Enjoy this? Rating helps us know if we should recommend more like this.")
 
 
 if __name__ == "__main__":

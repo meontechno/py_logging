@@ -9,10 +9,10 @@ def main() -> None:
         filename="basic-logs.log",
     )
 
-    logging.info("Who just meets a guy and moves him right away?")
-    logging.debug("Who just meets a guy and moves him right away?")
-    logging.warning("Who just meets a guy and moves him right away?")
-    logging.error("Who just meets a guy and moves him right away?")
+    logging.info("Enjoy this? Rating helps us know if we should recommend more like this.")
+    logging.debug("Enjoy this? Rating helps us know if we should recommend more like this.")
+    logging.warning("Enjoy this? Rating helps us know if we should recommend more like this.")
+    logging.error("Enjoy this? Rating helps us know if we should recommend more like this.")
 
 
 if __name__ == "__main__":

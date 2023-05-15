@@ -1,8 +1,14 @@
+import os
 import logging
 from logging.handlers import SysLogHandler
 
-PAPERTRAIL_HOST = "logs2.papertrailapp.com"
-PAPERTRAIL_PORT = 12686
+from dotenv import load_dotenv
+
+load_dotenv()
+config = os.environ
+
+PAPERTRAIL_HOST = config.get("PAPERTRAIL_HOST")
+PAPERTRAIL_PORT = config.get("PAPERTRAIL_PORT")
 
 
 def main() -> None:
@@ -11,7 +17,7 @@ def main() -> None:
     handler = SysLogHandler(address=(PAPERTRAIL_HOST, PAPERTRAIL_PORT))
     logger.addHandler(handler)
 
-    logger.info("Monte Rissle beaten and drowned")
+    logger.info("Enjoy this? Rating helps us know if we should recommend more like this.")
 
 
 if __name__ == "__main__":
